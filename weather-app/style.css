@@ -32,13 +32,13 @@ body {
     max-width: 85%;
     min-height: 300px;
     padding: 40px 50px;
-    background: rgba(255,255,255,0.35);
+    background: rgba(0,0,0,0.015);
     border-radius: 18px;
     border: 1px solid rgba(255,255,255,0.25);
     box-shadow: 0 0 10px 1px rgba(0,0,0,.25),
                 inset 4px 4px 5px rgba(255,255,255,0.25),
                 inset -4px -4px 5px rgba(255,255,255,0.125);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(3px);
 }
 
 .search-bar {
@@ -70,7 +70,8 @@ body {
 
 .search-bar button {
     height: 100%;
-    min-width: 50px;
+    min-width: 60px;
+    min-height: 60px;
     border: none;
     outline: none;
     padding: 20px 25px;
@@ -79,10 +80,11 @@ body {
     cursor: pointer;
     border-radius: 35px;
     transition: 0.3s;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
 }
 
 .search-bar button:hover {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     color: #ddd;
 }
 
@@ -95,17 +97,17 @@ body {
 
 .weather-info .temps {
     min-width: 200px;
-    max-width: 60%;
-    padding: 25px 10px;
+    width: 70%;
+    padding: 25px 30px 10px 10px;
     border-right: 1px solid rgba(255,255,255,1);
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: space-around;
+    align-items: center;
 }
 
 .weather-info .temps .temp {
-    width: 85px;
     font-size: 100px;
     font-weight: 300;
     color: #fff;
@@ -146,4 +148,9 @@ body {
 .weather-info .temps .location .city {
     color: #fff;
     font-size: 24px;
+}
+
+.weather-info .additional-info {
+    max-width: 30%;
+    width: 100px;
 }
