@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+/* Poppins Font Import */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", default;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(150deg, #153677, #4e085f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #fff;
+    padding: 40px 30px 70px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+}
+
+.todo-app h2 {
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: 0.2s;
+}
+
+.row button:hover {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}
+
+.todo-app ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.todo-app ul li::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: #edeef0;
+    top: 12px;
+    left: 8px;
+}
+
+.todo-app ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.todo-app ul li.checked::before {
+    background: #333;
+}
+
+.todo-app ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.todo-app ul li span:hover {
+    background: #edeef0;
+}
